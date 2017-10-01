@@ -1,0 +1,15 @@
+{
+  "name": "wxapp-redux",
+  "version": "0.1.0",
+  "description": "use redux to build wxapp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wxapp",
+    "redux"
+  ],
+  "author": "ihtml5",
+  "license": "MIT"
+}

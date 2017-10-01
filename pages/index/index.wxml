@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="tnwx-container">
+  <text bindtap="refreshPage">wxScalpel</text>
+</view>
+<view>
+  <text>status:{{status}}</text>
+</view>
