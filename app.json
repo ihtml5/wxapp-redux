@@ -1,28 +1,34 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/docs/docs"
+    "pages/me/me",
+    "pages/announcement/announcement",
+    "pages/detail/detail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#lalala",
     "selectedColor": "#1479d7",
     "backgroundColor": "#fff",
     "borderStyle": "#fff",
-    "position": "top",
+    "position": "bottom",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "home"
+        "text": "联系人"
       },
       {
-        "pagePath": "pages/docs/docs",
-        "text": "docs"
+        "pagePath": "pages/announcement/announcement",
+        "text": "公告"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我"
       }
     ]
   },

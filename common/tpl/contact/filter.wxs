@@ -1,0 +1,7 @@
+function getIcon (info) {
+  return info.enableSpin ? 'fa fa-'+info.iconType+' fa-spin' : 'fa fa-'+info.iconType;
+}
+
+module.exports = {
+  getIcon: getIcon
+}

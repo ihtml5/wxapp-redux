@@ -1,0 +1,7 @@
+<template name="contact/nav">
+    <view class="contact-nav box box-tb" bindtouchmove="touchmove" bindtouchcancel="touchcancel" bindtouchend="touchend">
+        <view bindtap="tabLetter" data-index="{{item}}" wx:for="{{letters}}" class="flex box box-align-center box-pack-center letter" wx:key="unqiue">
+          <text class="letter-text {{selected == item ? 'letter-actived' : ''}}">{{item}}</text>
+        </view>
+      </view>
+</template>

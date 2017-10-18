@@ -1,0 +1,20 @@
+
+<template name="contact/item">
+  <navigator url="../../pages/detail/detail" hover-class='navigator-hover'>
+      <view class="flex" id="{{group.groupName}}">
+        <view class="group-name">{{group.groupName}}</view>
+        <view class="flex group-users">
+          <view wx:for="{{group.users}}"
+              wx:for-item="user"
+              wx:for-index="idx"
+              class="user box box-lr"
+              wx:key="unqiue">
+            <view class="user-avatar box box-lr box-pack-center box-align-center">
+              <image class="user-avatar-img" src="{{user.avatar}}"></image>
+            </view>
+            <view class="flex user-name">{{user.name}}</view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+</template>

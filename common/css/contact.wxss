@@ -1,0 +1,32 @@
+.contact-searchField {
+  display: flex;
+  margin: 20rpx 20rpx 70rpx;
+  background-color: #eee;
+}
+
+.contact-searchField input, .contact-searchField input:focus {
+  flex: 1;
+  margin-right: 20rpx;
+  height: 70rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+  text-indent: 0.5em;
+  padding-left: 0.5em;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+
+
+.contact-searchField button {
+  position: relative;
+  top: 4rpx;
+  width: 100rpx;
+  height: 70rpx;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30rpx;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
+  outline: none;
+}

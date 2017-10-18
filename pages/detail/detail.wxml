@@ -1,0 +1,5 @@
+<!--index.wxml-->
+
+<view class="contact-detail">
+  <text>详情页</text>
+</view>

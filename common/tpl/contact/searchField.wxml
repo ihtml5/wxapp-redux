@@ -1,0 +1,9 @@
+<wxs src="./filter.wxs" module="fmt"/>
+<template name="contact/searchField">
+  <view class="contact-searchField">
+    <input placeholder="搜索联系人"  confirm-type='search'/>
+    <button bindtap="bindButtonTap">
+      <icon class="{{fmt.getIcon({enableSpin: enableSpin, iconType: iconType})}}"></icon>
+    </button>
+  </view>
+</template>
