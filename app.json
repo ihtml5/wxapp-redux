@@ -12,7 +12,7 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#lalala",
+    "color": "#555",
     "selectedColor": "#1479d7",
     "backgroundColor": "#fff",
     "borderStyle": "#fff",
@@ -20,15 +20,21 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "联系人"
+        "text": "联系人",
+        "iconPath": "images/contact.png",
+        "selectedIconPath": "images/contact-selected.png"
       },
       {
         "pagePath": "pages/announcement/announcement",
-        "text": "公告"
+        "text": "公告",
+        "iconPath": "images/announce.png",
+        "selectedIconPath": "images/announce-selected.png"
       },
       {
         "pagePath": "pages/me/me",
-        "text": "我"
+        "text": "我",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-selected.png"
       }
     ]
   },
