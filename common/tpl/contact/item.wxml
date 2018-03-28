@@ -18,3 +18,15 @@
       </view>
     </navigator>
 </template>
+
+<template name="department/item">
+  <view class="bccwx-department-item">
+    <view class="bccwx-department-name" bindtap="toDepartment">
+      {{name}}
+    </view>
+    <view class="bccwx-department-action">
+        {{num}}
+      >
+    </view>
+  </view>
+</template>

@@ -1,0 +1,7 @@
+<import src="../../common/tpl/contact/item.wxml" />
+<view class="bccwx-department">
+        <block wx:for="{{list}}">
+                <template is="department/item" data="{{...item}}">
+                </template>
+            </block>
+</view>

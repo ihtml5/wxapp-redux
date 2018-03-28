@@ -1,0 +1,6 @@
+<view class="bccwx-dpdetail-search">
+    <input placeholder-class="bccwx-dpdetail-placeholder" class="bccwx-dpdetail-input" type="text" placeholder="搜索联系人或电话" bindinput="doSearch"/>
+</view>
+<view>
+    {{keyword}}
+</view>

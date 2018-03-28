@@ -1,15 +1,26 @@
 
 <!-- 导入concatItem模版-->
-<import src="../../common/tpl/contact/item.wxml"/>
-<import src="../../common/tpl/contact/searchField.wxml"/>
-<import src="../../common/tpl/contact/nav.wxml"/>
-
-<template is="contact/searchField" data="{{enableSpin: false, iconType: 'search'}}"/>
-<view class="flex box box-lr">
-  <scroll-view class="flex groups box box-tb" scroll-y="true" scroll-into-view="{{scrollIntoView}}">
-    <block wx:for="{{groups}}" wx:for-item="group" wx:key="{{group.groupName}}">
-      <template is="contact/item" data="{{group}}"/>
-    </block>
-  </scroll-view>
-  <template is="contact/nav" data="{{item:item, letters: letters}}"/>
+<view class="bccwx-login">
+  <view class="bccwx-login-form">
+      <view class="bccwx-login-con">
+          <view class="bccwx-login-section bccwx-login-user">
+              <input type="text" placeholder-class="bccwx-login-placeholder" placeholder="用户名"/>
+            </view>
+            <view class="bccwx-login-section  bccwx-login-password">
+              <input placeholder-class="bccwx-login-placeholder" password type="text" placeholder="密码(区分大小写)"/>
+            </view>
+      </view>
+      <view class="bccwx-login-extraopts">
+          <label class="bccwx-login-auto">
+              <checkbox /> 自动登陆
+          </label>
+          <view class="bccwx-login-forget bccwx-login-auto" bindtap="doForget">
+            忘记密码?
+          </view>
+      </view>
+        <view class="bccwx-login-section">
+            <button type="primary" loading="{{submitLoading}}" class="bccwx-login-btn" bindtap="toHome">员工登陆</button>
+        </view>
+        <view class="bccwx-login-section bccwx-login-errmsg"></view>
+  </view>
 </view>

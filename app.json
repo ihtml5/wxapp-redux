@@ -3,7 +3,10 @@
     "pages/index/index",
     "pages/me/me",
     "pages/announcement/announcement",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/contact/contact",
+    "pages/department/department",
+    "pages/dpdetail/dpdetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,10 +22,16 @@
     "position": "bottom",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "联系人",
+        "pagePath": "pages/department/department",
+        "text": "部门",
         "iconPath": "images/contact.png",
         "selectedIconPath": "images/contact-selected.png"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "联系人",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-selected.png"
       },
       {
         "pagePath": "pages/announcement/announcement",
@@ -33,8 +42,8 @@
       {
         "pagePath": "pages/me/me",
         "text": "我",
-        "iconPath": "images/me.png",
-        "selectedIconPath": "images/me-selected.png"
+        "iconPath": "images/setting.png",
+        "selectedIconPath": "images/setting-selected.png"
       }
     ]
   },

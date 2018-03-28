@@ -1,19 +1,34 @@
-const config = require('../../constants/index');
-// pages/announcement.js
+// pages/department/department.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    submitLoading: false,
+    list: [{
+      name: '研究开发部',
+      num: 7,
+    },
+    {
+      name: '研究开发部',
+      num: 12,
+    },
+    {
+      name: '研究开发部',
+      num: 11,
+    },
+    {
+      name: '研究开发部',
+      num: 10,
+    }
+    ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.warn('onload:::', this.data);
+  
   },
 
   /**
@@ -36,22 +51,7 @@ Page({
   onHide: function () {
   
   },
-  toHome: function (e) {
-    this.setData({
-      submitLoading: true,
-    });
-    setTimeout(function () {
-      wx.switchTab({
-        url: config.LOGINAFTERURL,
-      });
-    }, 2000)
-  },
-  doForget: function (e) {
-    wx.showToast({
-      title: '忘记密码',
-      icon: 'error',
-    });
-  },
+
   /**
    * 生命周期函数--监听页面卸载
    */
@@ -78,5 +78,10 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  toDepartment: function (e) {
+    wx.navigateTo({
+      url: '../dpdetail/dpdetail'
+    })
+  },
 })

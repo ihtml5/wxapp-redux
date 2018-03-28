@@ -1,0 +1,15 @@
+
+<!-- 导入concatItem模版-->
+<import src="../../common/tpl/contact/item.wxml"/>
+<import src="../../common/tpl/contact/searchField.wxml"/>
+<import src="../../common/tpl/contact/nav.wxml"/>
+
+<template is="contact/searchField" data="{{enableSpin: false, iconType: 'search'}}"/>
+<view class="flex box box-lr">
+  <scroll-view class="flex groups box box-tb" scroll-y="true" scroll-into-view="{{scrollIntoView}}">
+    <block wx:for="{{groups}}" wx:for-item="group" wx:key="{{group.groupName}}">
+      <template is="contact/item" data="{{group}}"/>
+    </block>
+  </scroll-view>
+  <template is="contact/nav" data="{{item:item, letters: letters}}"/>
+</view>

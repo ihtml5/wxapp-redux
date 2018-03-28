@@ -1,0 +1,22 @@
+.bccwx-dpdetail-placeholder {
+    color: #999;
+    text-align: center;
+    font-size: 28rpx;
+}
+.bccwx-dpdetail-input {
+    width: 600rpx;
+    color: #555;
+    height: 70rpx;
+    border-radius: 10rpx;
+    border: 1rpx solid #eee;
+    font-size: 28rpx;
+    background-color: #fff;
+    text-align: center;
+}
+.bccwx-dpdetail-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20rpx 40rpx;
+    background-color: #999;
+}

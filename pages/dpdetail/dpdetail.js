@@ -1,19 +1,18 @@
-const config = require('../../constants/index');
-// pages/announcement.js
+// pages/dpdetail/dpdetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    submitLoading: false,
+    keyword: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.warn('onload:::', this.data);
+  
   },
 
   /**
@@ -29,29 +28,20 @@ Page({
   onShow: function () {
   
   },
-
+  doSearch: function (e) {
+    console.warn('dosearch:::', e);
+    const { value } = e.detail;
+    this.setData({
+      keyword: value,
+    });
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
   
   },
-  toHome: function (e) {
-    this.setData({
-      submitLoading: true,
-    });
-    setTimeout(function () {
-      wx.switchTab({
-        url: config.LOGINAFTERURL,
-      });
-    }, 2000)
-  },
-  doForget: function (e) {
-    wx.showToast({
-      title: '忘记密码',
-      icon: 'error',
-    });
-  },
+
   /**
    * 生命周期函数--监听页面卸载
    */
