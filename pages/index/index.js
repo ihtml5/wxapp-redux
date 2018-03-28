@@ -42,7 +42,7 @@ Page({
     });
     setTimeout(function () {
       wx.switchTab({
-        url: config.LOGINAFTERURL,
+        url: '../me/me' || config.LOGINAFTERURL,
       });
     }, 2000)
   },
