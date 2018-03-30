@@ -1,7 +1,7 @@
 //docs.js
-const { promisfy } = require('../../utils/wx-utils.js');
-const { autorun } = require('../../utils/util.js');
-autorun({
+const { promisfy, AppInfo, page } = require('../../utils/wx-utils.js');
+const { nortonPage } = require('../../utils/index.js');
+nortonPage({
   data: {
     logs: []
   },
