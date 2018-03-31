@@ -20,8 +20,8 @@
 </template>
 
 <template name="department/item">
-  <view class="bccwx-department-item">
-    <view class="bccwx-department-name" bindtap="toDepartment">
+  <view class="bccwx-department-item" bindtap="toDepartment">
+    <view class="bccwx-department-name">
       {{name}}
     </view>
     <view class="bccwx-department-action">

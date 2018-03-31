@@ -1,50 +1,60 @@
-const config = require('../../constants/index');
-// pages/announcement.js
-Page({
-
+const { APIINFO, LOGINAFTERURL } = require('../../constants/index.js');
+const { nortonPage } = require('../../utils/index.js');
+const { fetch } = require('../../utils/wx-utils.js');
+nortonPage({
   /**
    * 页面的初始数据
    */
   data: {
     submitLoading: false,
+    autologin: false,
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-    console.warn('onload:::', this.data);
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
   
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
   
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide: function () {
   
+  },
+  onChange: function (e) {
+    const { value } = e.detail;
+    console.warn('value', value[0]);
+    this.setData({
+      autologin: Boolean(value[0]),
+    })
+  },
+  onInput: function (e) {
+    const { value } = e.detail;
+    const { name } = e.currentTarget.dataset;
+    this.setData({
+      [name]: value,
+    });
   },
   toHome: function (e) {
     this.setData({
       submitLoading: true,
     });
-    setTimeout(function () {
-      wx.switchTab({
-        url: '../me/me' || config.LOGINAFTERURL,
+    const { username, password } = this.data;
+    fetch({
+     url: APIINFO.logincheck,
+     method: 'POST',
+     data: {
+       username,
+       password,
+     } 
+    }).then(res => {
+      this.setData({
+        submitLoading: false,
+      }, () => {
+        wx.switchTab({
+          url: LOGINAFTERURL,
+        });
       });
-    }, 2000)
+    });
   },
   doForget: function (e) {
     wx.showToast({
@@ -52,31 +62,7 @@ Page({
       icon: 'error',
     });
   },
-  /**
-   * 生命周期函数--监听页面卸载
-   */
   onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
   
   }
 })

@@ -3,5 +3,5 @@
         <block wx:for="{{list}}">
                 <template is="department/item" data="{{...item}}">
                 </template>
-            </block>
+        </block>
 </view>
